@@ -33,7 +33,7 @@ spack -e carla2024-env install
 ## anda
 
 ## Añadiendo py-pandas
-  - py-pandas %gcc@11.4.0
+  - py-pandas@1.5.3 %gcc@11.4.0
 
 spack -e carla2024-env concretize
 
