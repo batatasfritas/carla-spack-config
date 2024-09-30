@@ -52,4 +52,5 @@ seria añadir un nuevo compilador y crear toda una sección basada en eso.
       - [$%compilador_nuevo]
 ```
 
-Se puede instalar esta stack más completa, va a añadir ~150 programas...
+Se podría concretizar e instalar esta stack más completa, pero el paquete gcc
+tiene más de 600 MB, tal vez no valga la pena que lo hagamos todos al tiempo.
