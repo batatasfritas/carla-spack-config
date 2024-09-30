@@ -1,0 +1,3 @@
+config:
+  install_tree:
+    root: /home/carla2024/spack_stack/v1/opt/spack
