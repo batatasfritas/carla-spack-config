@@ -1,0 +1,16 @@
+spack:
+  packages:
+    blas:
+      require: ['openblas']
+
+    fftw-api:
+      require: ['fftw']
+
+  specs:
+    - gromacs %gcc@11.4.0
+    - perl %gcc@11.4.0
+    - py-pandas %gcc@11.4.0
+
+  view: false
+  concretizer:
+    unify: false
