@@ -1,3 +1,5 @@
 config:
+  install_missing_compilers: false
   install_tree:
     root: /home/carla2024/spack_stack/v1/opt/spack
+  environments_root: /home/carla2024/spack_stack/v1/environments
