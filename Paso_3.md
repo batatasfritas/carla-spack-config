@@ -37,6 +37,9 @@ spack -e carla2024-env install
 
 spack -e carla2024-env concretize
 
+Escogimos una versión más antigua para evitar una dependencia de pandas 2.
+El paquete llvm en la cache Spack tiene 2 GB...
+
 ### Más o menos 120 s
 
 Ya tenemos un OpenBlas, mantengamos ese en todo el ambiente
