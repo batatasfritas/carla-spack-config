@@ -20,6 +20,7 @@ poca redundancia.
       - cmake +ncurses
       - git
       - gzip
+      - lmod
 
   specs:
     - matrix:
@@ -28,7 +29,9 @@ poca redundancia.
 ```
 
 Un spack concretize con la stack anterior más esta sección añadida
-concretiza los 7 programas.
+concretiza los 8 programas.
+
+Como no son muchas cosas, podemos lanzar de nuevo un spack install.
 
 ### Definiciones adicionales
 
