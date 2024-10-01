@@ -40,18 +40,19 @@ spack -e carla2024-env concretize
 Escogimos una versión más antigua para evitar una dependencia de pandas 2.
 El paquete llvm en la cache Spack tiene 2 GB...
 
-### Más o menos 120 s
+## Uniformizando la estructura
 
-Ya tenemos un OpenBlas, mantengamos ese en todo el ambiente
+Ya tenemos un OpenBlas, mantengamos ese en todo el ambiente.
 
-## Editar el ambiente y añadir sección packages
+Hay que editar el ambiente Spack y añadir sección packages
+```yaml
   packages:
     blas:
       require: ['openblas']
 
     fftw-api:
       require: ['fftw']
+```
 
-lanzar spack concretize
-# esta vez necesita -f por que ya teníamos una concretización
-spack -e carla2024-env concretize -f
+Una vez hecho, se puede lanzar un concretize. Como ya teníamos una
+concretización, en realidad spack no hace nada.
