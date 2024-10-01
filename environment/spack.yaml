@@ -6,10 +6,23 @@ spack:
     fftw-api:
       require: ['fftw']
 
+  definitions:
+    - compilador: ['gcc@11.4.0 target=x86_64_v3']
+
+    - codigos_base:
+      - bzip2
+      - cmake +ncurses
+      - git
+      - gzip
+
   specs:
     - gromacs %gcc@11.4.0
     - perl %gcc@11.4.0
-    - py-pandas %gcc@11.4.0
+    - py-pandas@1.5.3 %gcc@11.4.0
+
+    - matrix:
+      - [$codigos_base]
+      - [$%compilador]
 
   view: false
   concretizer:
