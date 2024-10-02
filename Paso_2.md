@@ -18,7 +18,7 @@ Concretized
 ...
 ```
 
-A `bison`, que esta en la build cache, Spack lo propone en versión x86_64_v3.
+A `bison`, que esta en la build cache, Spack lo propone en versión `x86_64_v3`.
 Pero como no hay tmux en el build cache, Spack se propuso a compilarlo
 especificamente para la arquitectura del procesador (skylake en nuestro caso).
 No hay ningun problema con eso, pero para sermos consistentes con lo que hay
@@ -32,7 +32,7 @@ packages:
 ```
 
 El mismo `spack spec` de arriba tendría ahora una
-`arch=linux-ubuntu22.04-x86_64_v3`. Escogiendo los targets permite que, en un
+`arch=linux-ubuntu22.04-x86_64_v3`. Escogiendo los targets permite, en un
 ambiente con variadas arquitecturas, instalar las mismas cosas desde un solo
 servidor, por ejemplo. También permite garantizar que Spack no mezcla
 arquitecturas diferentes, si se quiere mantener una uniformidad.
@@ -51,11 +51,10 @@ archivo `config.yaml` que creamos en el paso anterior.
 ## Carpeta para los ambientes Spack
 
 Aprovechemos que tenemos al `config.yaml` para definir una carpeta para los
-ambiente Spack. Normalmente se crean adentro de la carpeta de spack, pero
+ambiente Spack. Normalmente se crean adentro de la carpeta de Spack, pero
 las pondremos junto con lo demás para que no se pierda (y para mostrar que
-también eso se puede aislar de la instalación de spack).
-Añadiremos una linea `environments_root` para ponerlos en una carpeta
-diferente del default.
+también eso se puede aislar de la instalación de spack). Añadiremos una linea
+`environments_root` para ponerlos en una carpeta diferente del default.
 
 Al final de todo esto, tendremos un archivo con el contenido:
 
