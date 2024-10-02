@@ -21,7 +21,7 @@ config:
     root: /home/<user>/spack_stack/v1/opt/spack
 ```
 
-Aquí el v1 un intento de versionar la stack. Una futura stack podría hacerse
+Aquí el v1 es un intento de versionar la stack. Una futura stack podría hacerse
 en un v2.
 Atención que el usuario cambia dependiendo de si están en docker (carla2024) o
 usando apptainer.
@@ -62,8 +62,8 @@ programas ya compilados. Son utiles sobretodo en el contexto de una demo
 con un container que se lanza en un laptop. No tendríamos tiempo de compilar
 casi nada.
 
-Haciendo una selección criteriosa de los paquetes que instalaremos
-podemos instalar una stack bastante completa solo con el buildcache. Esa es
+Escogiendo bien paquetes que instalaremos podemos instalar una stack que
+demuestre lo que se puede hacer con spack solo con el buildcache. Esa es
 la razón por la cual el compilador que usamos en estos ejemplos es el
 `gcc-11.4.0`, el compilador de base de Ubuntu 22.04, ya que hay mucho
 software pre-compilado para esto.
@@ -77,8 +77,8 @@ que todo va bien. Lanzemos una concretización en primer lugar:
 spack spec -Il fftw %gcc@11.4.0
 ```
 
-Spack empieza por buscar unos archivos donde hay el nombre clingo, antes de
-terminar pensar un rato y devolver una concretización. Se ve que va a instalar
+Spack empieza por buscar unos archivos donde hay la palabra clingo, antes de
+pensar un rato y devolver una concretización. Se ve que va a instalar
 `fftw +mpi` con `mpich` como provedor MPI, entre otras dependencias.
 
 Instalemos FFTW entonces:
@@ -116,5 +116,5 @@ gpg: Good signature from "Spack Project Official Binaries <maintainers@spack.io>
 Para los que tengan acceso a un cluster y que aún así hayan añadido el build
 cache, si quieren compilar algo pueden intentar `fftw ~~mpi %gcc@11.4.0`.
 
-Para los que solo tengan un laptop y que quieran probar una compilación, intenten
-con `tmux`. Probablemente queda instalado en menos de 2 minutos.
+Para los que solo tienen un laptop y que quieran compilar algo, intenten con
+`tmux %gcc@11.4.0`. Probablemente queda instalado en menos de 2 minutos.
