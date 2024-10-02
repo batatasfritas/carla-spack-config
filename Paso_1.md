@@ -108,4 +108,4 @@ Para los que tengan acceso a un cluster y que aún así hayan añadido el build
 cache, si quieren compilar algo pueden intentar `fftw ~~mpi %gcc@11.4.0`.
 
 Para los que solo tengan un laptop y aún así quieran compilar algo prueben 
-con `tmux`. Probablemente queda instalado en menos de 2 minutos.
+con `tmux %gcc@11.4.0`. Probablemente queda instalado en menos de 2 minutos.
