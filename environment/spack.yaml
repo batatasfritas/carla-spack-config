@@ -6,8 +6,17 @@ spack:
     fftw-api:
       require: ['fftw']
 
+    fftw:
+      prefer: ['+mpi', '+openmp']
+
+    openblas:
+      prefer: ['threads=openmp']
+
   definitions:
     - compilador: ['gcc@11.4.0 target=x86_64_v3']
+    - blas_gcc: ['openblas@0.3.26']
+    - mpi_gcc: ['mpich@4.0.3']
+    - python_gcc: ['python@3.11.7']
 
     - codigos_base:
       - bzip2
@@ -15,14 +24,52 @@ spack:
       - git
       - gzip
       - lmod
+      - perl
+      - python
+
+    - codigos_python:
+      - py-pip
+      - py-urllib3
+
+    - codigos_python_blas:
+      - py-numpy
+      - py-pandas@1.5.3
+
+    - codigos_mpi:
+      - fftw +mpi
+      - scotch +mpi
+
+    - codigos_mpi_blas_python:
+      - cp2k +mpi
+      - gromacs +mpi
 
   specs:
-    - gromacs %gcc@11.4.0
-    - perl %gcc@11.4.0
-    - py-pandas@1.5.3 %gcc@11.4.0
 
     - matrix:
       - [$codigos_base]
+      - [$%compilador]
+
+    - matrix:
+      - [$codigos_python]
+      - [$^python_gcc]
+      - [$%compilador]
+
+    - matrix:
+      - [$codigos_python_blas]
+      - [$^blas_gcc]
+      - [$^python_gcc]
+      - [$%compilador]
+
+    - matrix:
+      - [$codigos_mpi]
+      - [$^mpi_gcc]
+      - [$%compilador]
+
+    - matrix:
+      - [$codigos_mpi_blas_python]
+      - [$^blas_gcc]
+      - [$^python_gcc]
+      - [$^mpi_gcc]
       - [$%compilador]
 
   view: false
