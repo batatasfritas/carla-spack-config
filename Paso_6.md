@@ -12,7 +12,7 @@ modules:
   default:
     enable: [lmod]
     roots:
-      lmod: /home/carla2024/spack_stack/v1/modulos
+      lmod: /home/<user>/spack_stack/v1/modulos
     lmod:
       hash_length: 0
  
@@ -39,7 +39,7 @@ Este comando creó unos módulos que todavía no están visibles. Para eso
 necesitamos lanzar dos comandos más:
 ```bash
 source $(spack location -i lmod)/lmod/lmod/init/bash
-module use /home/$USER/spack_stack/v1/modulos/linux-ubuntu22.04-x86_64/Core
+module use /home/<user>/spack_stack/v1/modules/linux-ubuntu22.04-x86_64/Core
 ```
 
 Ahí, un `module av` ya nos muestra los varios módulos que instalamos.
