@@ -54,7 +54,7 @@ Para bajar el container con apptainer hay que hacer:
 apptainer pull docker://registry.c4science.ch/carla2024/carla2024_ubuntu:latest
 ```
 
-En nuestro caso, esto baja el imagen y crea un archivo `.sif` que se puede
+En nuestro caso, esto baja la imagen y crea un archivo `.sif` que se puede
 lanzar con Apptainer.
 La manera de lanzarlo con apptainer va a cambiar un poco de un cluster al
 otro. Para lanzar una sessión de apptainer de 1h con 20 cores en uno de
