@@ -1,4 +1,4 @@
-# Compilando tu primera stack
+# Compilando tu primera stack (Daniel Jana, CARLA 2024)
 
 Para esta sessión más interactiva hay dos planes posibles:
 
